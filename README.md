@@ -17,6 +17,7 @@ Requirements:
 sudo apt-get install libudev-dev && sudo apt-get install libssl-dev
 ```
 4. Check the serial path (by default `/dev/ttyUSB0`) and change according to your setup.
+5. Check the InfluxDB database name (by default `p1meter`).
 5. Test if it works by running `cargo run` (if you don't have the Rust toolchain installed click [here](https://www.rust-lang.org/tools/install))
 6. Finally, run `cargo build` to create the binary executable. Use this executable as you wish, for example add it as systemd service so that it automatically starts and restarts.
 
