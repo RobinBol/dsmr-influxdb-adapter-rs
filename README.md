@@ -23,10 +23,10 @@ sudo apt-get install libudev-dev && sudo apt-get install libssl-dev
 Create `/etc/systemd/system/smart-meter.service`:
 ```
 [Unit]
-Description=P1 Meter Process
+Description=InfluxDB-DSMR Adapter Process
 
 [Service]
-ExecStart=/home/pi/rust/p1-meter/target/debug/p1-meter
+ExecStart=/home/<user>/path/to/dsmr-influxdb-adapter-rs/target/debug/dsmr-influxdb-adapter-rs
 Restart=always
 
 [Install]
