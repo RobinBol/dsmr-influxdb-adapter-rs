@@ -38,5 +38,6 @@ And run `sudo systemctl enable smart-meter.service`.
 ### Usage
 
 Use a data visualization tool that uses InfluxDB as data source to create some nice graphs and/or dashboards. For example:
+![Screenshot 2021-02-12 at 20 39 05](https://user-images.githubusercontent.com/5762579/107816565-3b64e000-6d75-11eb-8b5e-5824ca8ac91b.png)
 
 _Disclaimer: I probably forgot to document something..._
