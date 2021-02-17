@@ -17,6 +17,7 @@ Requirements:
 sudo apt-get install libudev-dev && sudo apt-get install libssl-dev
 ```
 4. Check the serial path (by default `/dev/ttyUSB0`) and change according to your setup.
+5. Check the InfluxDB database name (by default `p1meter`).
 5. Test if it works by running `cargo run` (if you don't have the Rust toolchain installed click [here](https://www.rust-lang.org/tools/install))
 6. Finally, run `cargo build` to create the binary executable. Use this executable as you wish, for example add it as systemd service so that it automatically starts and restarts.
 
@@ -38,5 +39,6 @@ And run `sudo systemctl enable smart-meter.service`.
 ### Usage
 
 Use a data visualization tool that uses InfluxDB as data source to create some nice graphs and/or dashboards. For example:
+![Screenshot 2021-02-12 at 20 39 05](https://user-images.githubusercontent.com/5762579/107816565-3b64e000-6d75-11eb-8b5e-5824ca8ac91b.png)
 
 _Disclaimer: I probably forgot to document something..._
