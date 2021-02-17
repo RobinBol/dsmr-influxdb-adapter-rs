@@ -16,6 +16,18 @@ const SERIAL_TOKEN: Token = Token(0);
 const DEFAULT_TTY: &str = "/dev/ttyUSB0";
 const INFLUX_DB_URI: &str = "http://localhost:8086/write?db=p1meter";
 
+/**
+ * This adapter POSTs the following measurements to InfluxDB
+ * - currentTariff - 1 or 2
+ * - wattUsage - Current usage in Watt
+ * - wattUsageAccumulative - Current accumulative usage in kWh (sum of both tariffs)
+ * - wattProduction - Current production in Watt
+ * - wattProductionAccumulative - Current accumulative produced in kWh (sum of both tariffs)
+ * - wattNett - Current nett power consumption in Watt (production minus usage)
+ * - wattAccumulativeNett - Current accumulative nett power consumption in kWh (production minus usage)
+ * - gasUsageAccumulative - Current accumulative gas usage in m3
+ */
+
 // Post a measurement to InfluxDB
 async fn post_influx_db(client: &reqwest::Client, key: &str, value: f32) {
     let request = format!("{},host=pi,region=eu-west value={}", key, value);
