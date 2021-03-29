@@ -235,11 +235,11 @@ async fn parse_gas_usage_accumulative(telegram: &str) -> Result<f32, &'static st
 
 // TODO: use the timestamps from the telegram instead of the InfluxDB fallback
 async fn parse_telegram(client: &reqwest::Client, telegram: &str) {
-    let timestamp = parse_timestamp(&telegram).await;
-    match timestamp {
-        Ok(_timestamp) => println!("Timestamp: {:?}", _timestamp),
-        Err(_err) => println!("Error: could not find timestamp {}", _err),
-    }
+    // let timestamp = parse_timestamp(&telegram).await;
+    // match timestamp {
+    //     Ok(_timestamp) => println!("Timestamp: {:?}", _timestamp),
+    //     Err(_err) => println!("Error: could not find timestamp {}", _err),
+    // }
 
     let current_tariff = parse_current_tariff(&telegram).await;
     match current_tariff {
