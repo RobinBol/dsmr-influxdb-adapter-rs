@@ -27,7 +27,7 @@ Create `/etc/systemd/system/smart-meter.service`:
 Description=InfluxDB-DSMR Adapter Process
 
 [Service]
-ExecStart=/home/<user>/path/to/dsmr-influxdb-adapter-rs/target/debug/dsmr-influxdb-adapter-rs
+ExecStart=/home/<user>/path/to/dsmr-influxdb-adapter-rs/target/debug/dsmr-influxdb-adapter
 Restart=always
 
 [Install]
